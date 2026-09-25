@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#1b0726" />
+<title>Aynur 🌹</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💌</text></svg>" />
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+  background:#16061f;color:#fff;min-height:100vh;overflow-x:hidden;
+}
+/* ---------- arkaplan ---------- */
+.bg{
+  position:fixed;inset:0;z-index:0;
+  background:
+    radial-gradient(1200px 800px at 15% 10%, rgba(255,77,141,.28), transparent 60%),
+    radial-gradient(1000px 700px at 85% 20%, rgba(155,89,255,.30), transparent 60%),
+    radial-gradient(900px 900px at 50% 100%, rgba(255,105,135,.22), transparent 65%),
+    linear-gradient(160deg,#1b0726 0%, #2b0a3a 45%, #170620 100%);
+  animation:bgshift 14s ease-in-out infinite alternate;
+}
+@keyframes bgshift{from{filter:hue-rotate(0deg)}to{filter:hue-rotate(28deg)}}
+#floats{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.float-heart{position:absolute;bottom:-40px;animation:floatUp linear forwards;will-change:transform,opacity}
+@keyframes floatUp{
+  0%{transform:translateY(0) rotate(0deg);opacity:0}
+  8%{opacity:.9}
+  100%{transform:translateY(-115vh) rotate(24deg);opacity:0}
+}
+.spark{position:fixed;z-index:1;color:#ffd9ec;pointer-events:none;animation:twinkle 3s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:.12;transform:scale(.8)}50%{opacity:.9;transform:scale(1.2)}}
+/* ---------- ekranlar ---------- */
+.screen{position:relative;z-index:2;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 20px;text-align:center}
+.hidden{display:none!important}
+/* intro */
+#intro .env{font-size:clamp(64px,12vw,96px);animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.14) rotate(-4deg)}}
+#intro h1{
+  font-family:Georgia,"Times New Roman",serif;font-size:clamp(34px,7vw,56px);margin:18px 0 10px;
+  background:linear-gradient(90deg,#ffd6e8,#ff8fb7,#ffd6e8);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+#intro p{color:#e8c9dd;font-size:clamp(15px,2.5vw,19px);max-width:460px;line-height:1.7}
+.btn{
+  margin-top:30px;cursor:pointer;border:none;border-radius:999px;
+  padding:16px 42px;font-size:18px;font-weight:700;color:#fff;font-family:inherit;
+  background:linear-gradient(135deg,#ff4f8b,#c445f5);
+  box-shadow:0 10px 30px rgba(255,79,139,.45);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.btn:hover{transform:translateY(-2px) scale(1.05);box-shadow:0 14px 38px rgba(255,79,139,.62)}
+/* ana ekran */
+.name{
+  font-family:Georgia,serif;font-size:clamp(58px,14vw,120px);letter-spacing:.04em;line-height:1.1;
+  background:linear-gradient(90deg,#ffb3cd,#ff5c9d 35%,#b06bff 75%,#ffd27a);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 26px rgba(255,110,160,.35));
+  animation:nameIn 1.2s cubic-bezier(.2,.9,.3,1.2) both;
+}
+@keyframes nameIn{from{opacity:0;transform:translateY(30px) scale(.9)}to{opacity:1;transform:none}}
+.tagline{color:#eecadd;font-size:clamp(15px,2.6vw,20px);margin:16px 0 36px;max-width:540px;line-height:1.6}
+.card{
+  width:min(640px,94vw);background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.16);border-radius:22px;
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  padding:30px 28px;margin-bottom:26px;text-align:left;
+  box-shadow:0 18px 50px rgba(0,0,0,.35);
+  animation:cardIn .8s ease both;
+}
+@keyframes cardIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.card h2{font-family:Georgia,serif;font-size:clamp(20px,3.4vw,26px);margin-bottom:14px;color:#ffd9e8;text-align:center}
+.card p{color:#f2dcea;line-height:1.85;font-size:clamp(14px,2.2vw,16.5px)}
+.letter p+p{margin-top:14px}
+.sign{margin-top:18px;text-align:right;font-family:Georgia,serif;font-style:italic;color:#ffb9d3}
+.reasons li{list-style:none;color:#f2dcea;line-height:1.8;margin-bottom:10px;font-size:clamp(14px,2.2vw,16.5px)}
+.reasons li::before{content:"🌷 "}
+/* soru */
+.qwrap{position:relative;display:flex;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap;min-height:78px;margin-top:10px}
+#noBtn{background:linear-gradient(135deg,#6d5a7d,#4c3f63);box-shadow:none;transition:transform .15s ease}
+#noMsg{margin-top:12px;color:#ffb9d3;font-weight:600;font-size:clamp(13px,2.2vw,16px);min-height:1.2em}
+/* kutlama */
+#celebrate{border-color:rgba(255,180,210,.55);background:rgba(255,79,139,.14)}
+.big-love{
+  font-family:Georgia,serif;font-size:clamp(26px,6vw,46px);margin:8px 0 10px;text-align:center;
+  background:linear-gradient(90deg,#ffd27a,#ff5c9d,#b06bff);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:beat 1.4s ease-in-out infinite;
+}
+@keyframes beat{0%,100%{transform:scale(1)}12%{transform:scale(1.09)}24%{transform:scale(1)}36%{transform:scale(1.06)}48%{transform:scale(1)}}
+.counter{margin-top:18px;font-size:clamp(15px,2.4vw,18px);color:#ffd9e8;text-align:center}
+.counter b{color:#ff5c9d;font-size:1.35em}
+.actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin:6px 0 34px}
+.mini-btn{
+  cursor:pointer;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);
+  color:#ffe3ef;border-radius:999px;padding:12px 22px;font-size:15px;font-weight:600;font-family:inherit;
+  transition:transform .2s, background .2s;
+}
+.mini-btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.16)}
+footer{position:relative;z-index:2;text-align:center;color:#c9a6c4;font-size:13px;padding:0 20px 28px;line-height:1.7}
+/* confetti & pop */
+.conf{position:fixed;top:-34px;z-index:5;pointer-events:none;animation:confFall linear forwards}
+@keyframes confFall{
+  0%{transform:translate(0,-40px) rotate(0deg);opacity:1}
+  100%{transform:translate(var(--dx),108vh) rotate(var(--rot));opacity:.9}
+}
+.pop{position:fixed;z-index:6;pointer-events:none;font-size:22px;transform:translate(-50%,-50%);animation:popUp .9s ease-out forwards}
+@keyframes popUp{0%{transform:translate(-50%,-50%) scale(.4);opacity:1}100%{transform:translate(-50%,-170%) scale(1.5);opacity:0}}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div id="floats"></div>
+
+<!-- ============ GİRİŞ ============ -->
+<section id="intro" class="screen">
+  <div class="env">💌</div>
+  <h1>Aynur'um...</h1>
+  <p>Senin için gizli bir sürprizim var. İçeriğinde kalbimin bir parçası var, hazırlıklı ol. 🤫</p>
+  <button id="openBtn" class="btn">Sürprizi Aç</button>
+</section>
+
+<!-- ============ ANA EKRAN ============ -->
+<section id="main" class="screen hidden">
+  <h1 class="name">Aynur</h1>
+  <p class="tagline">Bu sayfa, kalbimin sana ait köşesinin resmi belgesi. 📜💖</p>
+
+  <div class="card letter">
+    <h2>Sana bir mektup 💌</h2>
+    <p>Aynur'um,</p>
+    <p>Bu satırları okurken dudağının kenarında o tanıdık gülümsemenin belirdiğinden eminim. Sana olan sevgimi kelimelere sığdırmaya denedim ama her denemede aynı yere çıkıyorum: <b>Sen.</b></p>
+    <p>Seni hayatıma kattığı günden beri her şeyin rengi değişti. Sabahları uyandığımda aklımda ilk sen varsın, gün bitince en çok özlediğim şey de sen. Bazen saatlerce yan yana oturup hiç konuşmadan bile keyif alabiliyoruz; seninle geçen her dakika, dünyanın en güzel anı.</p>
+    <p>Bu sayfayı sana açtım çünkü bazı hisler tek cümleye sığmıyor ama hepsi aynı yere çıkıyor: <b>Seni seviyorum.</b> Bu cümle ne kadar kısa olursa olsun, benim için sonsuz.</p>
+    <p>Söz veriyorum: Dünya dursa da, saatler çalışmayı bıraksa da... seni sevmek bir an bile durmayacak. Yanında olmak benim seçimim ve her gün yeniden onu yapıyorum.</p>
+    <p>İyi ki varsın, iyi ki hayatımısın, iyi ki benim Aynur'umsun. 🌹</p>
+    <p class="sign">— Kalbini kaptıran ❤️</p>
+  </div>
+
+  <div class="card">
+    <h2>Neden seni seviyorum? 🌷</h2>
+    <ul class="reasons">
+      <li>Gülüşün. Telefonu açtığımda aklıma gelen ilk görüntü hep o.</li>
+      <li>Sesin. Adımı söylediğinde odadaki bütün gürültü kayboluyor.</li>
+      <li>Bana öfke olamıyorum; sadece koluna girmek istiyorum.</li>
+      <li>Seninle sıradan pazar sabahları bile festivale dönüyor.</li>
+      <li>Ve tabii ki... sen. Sadece sen. Çünkü sensin. 🌹</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Peki, canım Aynur'um... beni seviyor musun? 🥺</h2>
+    <div class="qwrap">
+      <button id="yesBtn" class="btn">Evet 💖</button>
+      <button id="noBtn" class="btn">Hayır 🙈</button>
+    </div>
+    <p id="noMsg"></p>
+  </div>
+
+  <div id="celebrate" class="card hidden">
+    <h2>Tamamdır, kabul! 🎉</h2>
+    <div class="big-love">SENİ ÇOK SEVİYORUM 💖</div>
+    <p style="text-align:center">Biliyordum... Cevabın çoktan kalbimde yazılıydı. Bu siteye girer girmez zaten her şeyin bittiğini anlamıştım. Seni çok, çok, ÇOK seviyorum Aynur! 🌹</p>
+    <div class="counter">❤️ Bu sayfada kalbim sana şu ana kadar <b id="beats">0</b> kere attı — ve her biri senin için.</div>
+  </div>
+
+  <div class="actions">
+    <button id="rainBtn" class="mini-btn">🌹 Kalpler Yağdır</button>
+  </div>
+
+  <footer>Bu site, kalbimden satır satır yazıldı.<br/>Aynur + Sen = Sonsuza kadar 💞</footer>
+</section>
+
+<script>
+const rand=(a,b)=>a+Math.random()*(b-a);
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+const HEARTS=["💖","💗","💕","❤️","🌹","✨"];
+
+/* ---------- süzülen kalpler ---------- */
+const floats=document.getElementById("floats");
+let floatCount=0;
+setInterval(()=>{
+  if(floatCount>16)return;
+  const h=document.createElement("span");
+  h.className="float-heart";h.textContent=pick(HEARTS);
+  h.style.left=rand(2,96)+"vw";
+  h.style.fontSize=rand(14,34)+"px";
+  h.style.animationDuration=rand(7,13)+"s";
+  floats.appendChild(h);floatCount++;
+  h.addEventListener("animationend",()=>{h.remove();floatCount--;});
+},650);
+
+/* ---------- pırıltılar ---------- */
+for(let i=0;i<9;i++){
+  const s=document.createElement("span");
+  s.className="spark";s.textContent="✦";
+  s.style.left=rand(3,95)+"vw";s.style.top=rand(5,90)+"vh";
+  s.style.fontSize=rand(10,20)+"px";s.style.animationDelay=rand(0,3)+"s";
+  document.body.appendChild(s);
+}
+
+/* ---------- kalp confetisi ---------- */
+function rainHearts(n){
+  for(let i=0;i<n;i++){
+    const h=document.createElement("span");
+    h.className="conf";h.textContent=pick(HEARTS);
+    h.style.left=rand(0,100)+"vw";
+    h.style.fontSize=rand(16,38)+"px";
+    h.style.setProperty("--dx",rand(-120,120)+"px");
+    h.style.setProperty("--rot",rand(-540,540)+"deg");
+    h.style.animationDuration=rand(2.6,5.5)+"s";
+    h.style.animationDelay=rand(0,.8)+"s";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),7000);
+  }
+}
+
+/* ---------- kalp sayacı ---------- */
+let beats=0;const beatEl=document.getElementById("beats");
+function startBeats(){
+  if(window.__beats)return;
+  window.__beats=setInterval(()=>{beats++;beatEl.textContent=beats.toLocaleString("tr-TR");},850);
+}
+
+/* ---------- giriş -> ana ekran ---------- */
+document.getElementById("openBtn").addEventListener("click",()=>{
+  document.getElementById("intro").classList.add("hidden");
+  document.getElementById("main").classList.remove("hidden");
+  window.scrollTo({top:0});
+  startBeats();
+  rainHearts(26);
+});
+
+/* ---------- kaçan "Hayır" butonu ---------- */
+const noBtn=document.getElementById("noBtn");
+const yesBtn=document.getElementById("yesBtn");
+const noMsg=document.getElementById("noMsg");
+const noTexts=["Emin misin? 🤔","Gerçekten mi? 😳","Düşün, düşün... 🤔","Son şansın! ⏳","Kalbimin kırılma sesi geliyor 💔","O buton biraz utangaç... 🙈","Tamam, benden kaçıyor işte! 😤"];
+let noTries=0,noScale=1;
+noBtn.addEventListener("click",e=>{
+  e.stopPropagation();
+  noTries++;
+  noScale=Math.max(.45,noScale-.08);
+  yesBtn.style.transform="scale("+(1+noTries*.07)+")";
+  if(noTries>noTexts.length){
+    noBtn.style.transition="opacity .5s, transform .5s";
+    noBtn.style.opacity="0";noBtn.style.transform="scale(0)";
+    noMsg.textContent="'Hayır' butonu emekli edildi 📋 Geriye tek doğru cevap kaldı 💘";
+    setTimeout(()=>noBtn.remove(),600);
+    return;
+  }
+  const box=noBtn.parentElement.getBoundingClientRect();
+  const pad=10;
+  const maxX=Math.max(pad,box.width-noBtn.offsetWidth*noScale-pad);
+  const maxY=Math.max(pad,box.height-noBtn.offsetHeight*noScale-pad);
+  noBtn.style.position="absolute";
+  noBtn.style.left=rand(pad,maxX)+"px";
+  noBtn.style.top=rand(pad,maxY)+"px";
+  noBtn.style.transform="scale("+noScale+")";
+  noBtn.textContent=noTexts[noTries-1];
+  if(noTries===1)noMsg.textContent="Emin ol, o buton sana yetişmez 🏃‍♂️💨";
+});
+
+/* ---------- Evet! ---------- */
+yesBtn.addEventListener("click",()=>{
+  const c=document.getElementById("celebrate");
+  c.classList.remove("hidden");
+  setTimeout(()=>c.scrollIntoView({behavior:"smooth",block:"center"}),150);
+  rainHearts(90);
+  setTimeout(()=>rainHearts(60),700);
+  setTimeout(()=>rainHearts(50),1500);
+  document.title="Aynur + Sen = ❤️";
+});
+
+/* ---------- tıklanan yerde kalp ---------- */
+document.addEventListener("click",e=>{
+  if(e.target.closest("button"))return;
+  const p=document.createElement("span");
+  p.className="pop";p.textContent=pick(HEARTS);
+  p.style.left=e.clientX+"px";p.style.top=e.clientY+"px";
+  document.body.appendChild(p);
+  setTimeout(()=>p.remove(),950);
+});
+
+document.getElementById("rainBtn").addEventListener("click",e=>{e.stopPropagation();rainHearts(50);});
+
+
+</script>
+</body>
+</html>
